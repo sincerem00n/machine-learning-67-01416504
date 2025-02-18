@@ -23,7 +23,7 @@ from sklearn.model_selection import train_test_split
 
 # Convert to PyTorch tensors
 X_tensor = torch.tensor(features.values, dtype=torch.float32).to(device)
-y_tensor = torch.tensor(target.values, dtype=torch.float32).to(device)
+y_tensor = torch.tensor(target.values, dtype=torch.float32).view(-1,1).to(device)
 
 X_train, X_test, y_train, y_test = train_test_split(X_tensor, y_tensor, test_size=0.2, random_state=42)
 print(f'Train shape: {X_train.shape}, {y_train.shape}')
