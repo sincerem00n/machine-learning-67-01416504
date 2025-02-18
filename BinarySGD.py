@@ -69,7 +69,7 @@ cm=confusion_matrix(y_train_5,y_train_pred)
 y_test_pred=sgd_clf.predict(x_test)
 
 # classes=['Other Number','Number 5']
-# print(classification_report(y_test_5,y_test_pred,target_names=classes))
+print(classification_report(y_test_5,y_test_pred,target_names=classes))
 print("Accuracy Score = ",accuracy_score(y_test_5,y_test_pred)*100)
 
 
