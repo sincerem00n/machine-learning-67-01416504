@@ -1,3 +1,2 @@
-import torch
-torch.cuda.get_arch_list()
-print(torch.__path__)
+import tensorflow as tf
+print("Num GPUs Available: ", len(tf.config.list_physical_devices('GPU')))
